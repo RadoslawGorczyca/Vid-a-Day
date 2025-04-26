@@ -1,0 +1,19 @@
+detekt {
+    autoCorrect = System.getenv("CI") ? false : true
+    toolVersion = libs.versions.detekt
+    config = files("$rootDir/verification/config/detekt.yml")
+    buildUponDefaultConfig = true
+    reports {
+        sarif {
+            required = true
+            outputLocation.set(file("$buildDir/reports/detekt/detekt.sarif"))
+        }
+    }
+}
+
+dependencies {
+    detektPlugins(libs.detekt.formatting)
+    detektPlugins(libs.detekt.rules)
+    detekt(libs.detekt.cli)
+}
+

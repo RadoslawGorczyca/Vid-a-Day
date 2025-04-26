@@ -1,0 +1,12 @@
+<resources>
+
+    <style name="Theme.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/accent</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="windowSplashScreenAnimationDuration">1000</item> <!-- same value as in v31/ic_splash -->
+        <item name="postSplashScreenTheme">@style/Theme.Backbones</item>
+    </style>
+
+    <style name="Theme.Backbones" parent="Theme.AppCompat.DayNight.NoActionBar" />
+
+</resources>

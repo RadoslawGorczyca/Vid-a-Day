@@ -1,0 +1,98 @@
+[versions]
+kotlin = "2.1.10"
+ksp = "2.1.10-1.0.31"
+hilt = "2.55"
+coroutines = "1.10.1"
+lifecycle = "2.8.7"
+compose = "1.8.0"
+detekt = "1.23.8"
+linting-compose-rules = "0.4.22"
+destinations = "2.1.0"
+camera = "1.4.2"
+junit5 = "5.12.0"
+showkase = "1.0.3"
+media3 = "1.6.1"
+coil = "2.7.0"
+
+[libraries]
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
+hilt-compose-navigation = "androidx.hilt:hilt-navigation-compose:1.2.0"
+coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-serialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.0"
+kotlinx-immutable = "org.jetbrains.kotlinx:kotlinx-collections-immutable:0.3.8"
+lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle" }
+lifecycle-process = { module = "androidx.lifecycle:lifecycle-process", version.ref = "lifecycle" }
+
+#compose
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+compose-ui-util = { module = "androidx.compose.ui:ui-util", version.ref = "compose" }
+compose-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
+compose-material3 = "androidx.compose.material3:material3:1.3.2"
+
+#linting
+ktlint-rules = { module = "io.nlopez.compose.rules:ktlint", version.ref = "linting-compose-rules" }
+detekt-rules = { module = "io.nlopez.compose.rules:detekt", version.ref = "linting-compose-rules" }
+detekt-cli = { module = "io.gitlab.arturbosch.detekt:detekt-cli", version.ref = "detekt" }
+detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
+
+#media3
+media3-common = { group = "androidx.media3", name = "media3-common", version.ref = "media3" }
+media3-database = { group = "androidx.media3", name = "media3-database", version.ref = "media3" }
+media3-datasource = { group = "androidx.media3", name = "media3-datasource", version.ref = "media3" }
+media3-exoplayer = { group = "androidx.media3", name = "media3-exoplayer", version.ref = "media3" }
+media3-ui = { group = "androidx.media3", name = "media3-ui", version.ref = "media3" }
+
+#tools
+splashscreen = "androidx.core:core-splashscreen:1.2.0-beta02"
+activity-compose = "androidx.activity:activity-compose:1.10.1"
+lottie-compose = "com.airbnb.android:lottie-compose:6.6.3"
+coil-compose = { module ="io.coil-kt:coil-compose", version.ref = "coil" }
+coil-gif = { module ="io.coil-kt:coil-gif", version.ref = "coil" }
+destinations-compose = { module = "io.github.raamcosta.compose-destinations:core", version.ref = "destinations" }
+destinations-compose-ksp = { module = "io.github.raamcosta.compose-destinations:ksp", version.ref = "destinations" }
+timber = "com.jakewharton.timber:timber:5.0.1"
+shimmer = "com.valentinilk.shimmer:compose-shimmer:1.3.2"
+accompanist-permissions = "com.google.accompanist:accompanist-permissions:0.37.2"
+
+#camera
+camera-camera2 = { module = "androidx.camera:camera-camera2", version.ref = "camera" }
+camera-lifecycle = { module = "androidx.camera:camera-lifecycle", version.ref = "camera" }
+camera-view = { module = "androidx.camera:camera-view", version.ref = "camera" }
+camera-mlkit = { module = "androidx.camera:camera-mlkit-vision", version = "1.4.2" }
+
+#testing
+test-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
+test-kotest = "io.kotest:kotest-assertions-core:5.9.1"
+test-turbine = "app.cash.turbine:turbine:1.2.0"
+test-mockk = "io.mockk:mockk:1.13.17"
+junit5-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit5" }
+junit5-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit5" }
+junit5-vintage = { module = "org.junit.vintage:junit-vintage-engine", version.ref = "junit5" }
+junit5-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit5" }
+param-injector = "com.google.testparameterinjector:test-parameter-injector:1.18"
+showkase = { module = "com.airbnb.android:showkase", version.ref = "showkase" }
+showkase-processor = { module = "com.airbnb.android:showkase-processor", version.ref = "showkase" }
+showkase-screenshot-testing = { module = "com.airbnb.android:showkase-screenshot-testing", version.ref = "showkase" }
+showkase-screenshot-testing-paparazzi = { module = "com.airbnb.android:showkase-screenshot-testing-paparazzi", version.ref = "showkase" }
+
+[plugins]
+android = { id = "com.android.application", version = "8.9.2" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version = "12.2.0" }
+junit5 = { id = "de.mannodermaus.android-junit5", version = "1.12.0.0" }
+paparazzi = { id = "app.cash.paparazzi", version = "1.3.5" }
+
+[bundles]
+compose = ["compose-ui", "compose-ui-util", "compose-tooling", "compose-foundation", "compose-material3"]
+camera = ["camera-camera2", "camera-lifecycle", "camera-view", "camera-mlkit"]
+test-junit5 = ["junit5-engine", "junit5-api", "junit5-vintage", "junit5-params"]
+media3 = ["media3-common", "media3-database", "media3-datasource", "media3-exoplayer", "media3-ui"]
