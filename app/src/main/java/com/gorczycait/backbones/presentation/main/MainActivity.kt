@@ -7,7 +7,6 @@ import android.view.animation.LinearInterpolator
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.activity.viewModels
 import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
@@ -16,13 +15,13 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-    private val viewModel by viewModels<MainViewModel>()
+    // private val viewModel by viewModels<MainViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen().setOnExitAnimation()
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContent { MainScreen(viewModel) }
+        setContent { MainScreen() }
     }
 
     private fun SplashScreen.setOnExitAnimation() {
