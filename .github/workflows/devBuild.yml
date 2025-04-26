@@ -43,7 +43,7 @@ jobs:
         run: ./gradlew detekt
 
       - name: Run Paparazzi Screenshot Tests
-        run: ./gradlew verifyPaparazziDebug
+        run: ./gradlew verifyPaparazziDevDebug verifyPaparazziProdDebug
 
       - name: Build with Gradle
         run: ./gradlew assembleDebug
