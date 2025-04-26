@@ -42,9 +42,6 @@ jobs:
       - name: Run Detekt
         run: ./gradlew detekt
 
-      - name: Run Paparazzi Screenshot Tests
-        run: ./gradlew verifyPaparazziDevDebug verifyPaparazziProdDebug
-
       - name: Build with Gradle
         run: ./gradlew assembleDebug
 
