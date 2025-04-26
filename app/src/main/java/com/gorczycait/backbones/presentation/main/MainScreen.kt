@@ -19,7 +19,7 @@ import com.gorczycait.backbones.presentation.common.theme.BackbonesTheme
 @SuppressLint("RestrictedApi")
 @Composable
 fun MainScreen(
-    viewModel: MainViewModel,
+    //viewModel: MainViewModel,
     modifier: Modifier = Modifier,
 ) {
     val scope = rememberCoroutineScope()
