@@ -9,7 +9,6 @@ plugins {
     alias(libs.plugins.kotlin.parcelize)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.ksp)
-    alias(libs.plugins.hilt)
     alias(libs.plugins.detekt)
     alias(libs.plugins.ktlint)
     alias(libs.plugins.junit5)
@@ -103,10 +102,8 @@ android {
 }
 
 dependencies {
-    implementation(libs.hilt.android)
-    implementation(libs.hilt.compose.navigation)
+    implementation(libs.bundles.koin)
     implementation(libs.bundles.media3)
-    ksp(libs.hilt.compiler)
 
     implementation(libs.coroutines)
 

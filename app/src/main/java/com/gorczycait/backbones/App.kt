@@ -2,17 +2,26 @@ package com.gorczycait.backbones
 
 import android.app.Application
 import com.gorczycait.backbones.BuildConfig.DEBUG
+import com.gorczycait.backbones.di.appModule
 import com.gorczycait.backbones.presentation.common.components.video.ExoPlayerCache
-import dagger.hilt.android.HiltAndroidApp
+import org.koin.android.ext.koin.androidContext
+import org.koin.core.context.startKoin
 import timber.log.Timber
 
-@HiltAndroidApp
 class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        initKoin()
         initTimber()
         initVideoCaches()
+    }
+
+    private fun initKoin() {
+        startKoin {
+            androidContext(this@App)
+            modules(appModule)
+        }
     }
 
     private fun initTimber() {

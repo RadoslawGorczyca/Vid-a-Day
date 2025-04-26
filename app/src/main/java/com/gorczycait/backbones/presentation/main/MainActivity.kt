@@ -10,9 +10,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import dagger.hilt.android.AndroidEntryPoint
+import com.ramcosta.composedestinations.DestinationsNavHost
+import com.ramcosta.composedestinations.generated.NavGraphs
 
-@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
     // private val viewModel by viewModels<MainViewModel>()
@@ -21,7 +21,9 @@ class MainActivity : ComponentActivity() {
         installSplashScreen().setOnExitAnimation()
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContent { MainScreen() }
+        setContent {
+            DestinationsNavHost(navGraph = NavGraphs.root)
+        }
     }
 
     private fun SplashScreen.setOnExitAnimation() {
