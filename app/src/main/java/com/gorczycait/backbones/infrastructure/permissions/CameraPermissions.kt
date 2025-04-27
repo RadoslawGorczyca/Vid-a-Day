@@ -1,20 +1,21 @@
 package com.gorczycait.backbones.infrastructure.permissions
 
 import android.Manifest.permission.CAMERA
+import android.Manifest.permission.RECORD_AUDIO
 import androidx.compose.runtime.Composable
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
-import com.google.accompanist.permissions.rememberPermissionState
+import com.google.accompanist.permissions.rememberMultiplePermissionsState
 
 @OptIn(ExperimentalPermissionsApi::class)
 @Composable
-fun rememberCameraPermissionState(
-    onPermissionGrant: () -> Unit,
+fun rememberVideoRecordingPermissionsState(
+    onAllPermissionGrant: () -> Unit = {},
     onPermissionsDeny: () -> Unit = {},
-) = rememberPermissionState(
-    permission = CAMERA,
-    onPermissionResult = { granted ->
-        if (granted) {
-            onPermissionGrant()
+) = rememberMultiplePermissionsState(
+    permissions = listOf(CAMERA, RECORD_AUDIO),
+    onPermissionsResult = { results ->
+        if (results.values.all { it }) {
+            onAllPermissionGrant()
         } else {
             onPermissionsDeny()
         }

@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Backbones</string>
     <string name="new_video">New video</string>
+    <string name="allow_camera">Camera access needed</string>
+    <string name="allow_camera_body">To record videos, please allow camera and microphone permissions in your device settings.</string>
+    <string name="navigate_to_settings">Go to settings</string>
+    <string name="permissions_needed_for_video_capturing">To capture videos you need to allow video and audio recording.</string>
 </resources>
