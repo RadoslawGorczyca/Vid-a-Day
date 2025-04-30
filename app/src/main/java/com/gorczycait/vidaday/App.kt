@@ -2,9 +2,9 @@ package com.gorczycait.vidaday
 
 import android.app.Application
 import com.gorczycait.vidaday.BuildConfig.DEBUG
-import com.gorczycait.vidaday.common.components.video.ExoPlayerCache
 import com.gorczycait.vidaday.di.appModule
 import com.gorczycait.vidaday.di.databaseModule
+import com.gorczycait.vidaday.presentation.common.components.video.ExoPlayerCache
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 import timber.log.Timber

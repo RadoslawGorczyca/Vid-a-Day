@@ -3,8 +3,8 @@ package com.gorczycait.vidaday.di
 import androidx.sqlite.db.SupportSQLiteDatabase
 import app.cash.sqldelight.driver.android.AndroidSqliteDriver
 import com.gorczycait.vidaday.Database
-import com.gorczycait.vidaday.VideoViewModel
-import com.gorczycait.vidaday.main.MainViewModel
+import com.gorczycait.vidaday.presentation.main.MainViewModel
+import com.gorczycait.vidaday.presentation.video.VideoViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
