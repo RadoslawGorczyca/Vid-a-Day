@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Backbones</string>
+    <string name="app_name">Vid-a-Day</string>
     <string name="new_video">New video</string>
     <string name="allow_camera">Camera access needed</string>
     <string name="allow_camera_body">To record videos, please allow camera and microphone permissions in your device settings.</string>

@@ -21,10 +21,10 @@ val isRunningOnCI = System.getenv("GITHUB_CI") != null
 
 android {
 
-    namespace = "com.gorczycait.backbones"
+    namespace = "com.gorczycait.vidaday"
 
     defaultConfig {
-        applicationId = "com.gorczycait.backbones"
+        applicationId = "com.gorczycait.vidaday"
         minSdk = 29
         targetSdk = 35
         compileSdk = 35
@@ -187,7 +187,7 @@ fun DefaultConfig.loadManifestKeyFromLocalProperties(property: String) {
 sqldelight {
     databases {
         create("Database") {
-            packageName.set("com.gorczycait.backbones")
+            packageName.set("com.gorczycait.vidaday")
         }
     }
 }
