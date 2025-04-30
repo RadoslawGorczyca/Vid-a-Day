@@ -5,4 +5,8 @@
     <string name="allow_camera_body">To record videos, please allow camera and microphone permissions in your device settings.</string>
     <string name="navigate_to_settings">Go to settings</string>
     <string name="permissions_needed_for_video_capturing">To capture videos you need to allow video and audio recording.</string>
+    <string name="video_description">Video description</string>
+    <string name="redo">Redo</string>
+    <string name="save">Save</string>
+    <string name="video_saved">Video saved!</string>
 </resources>
