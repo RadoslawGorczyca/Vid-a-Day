@@ -140,14 +140,16 @@ private fun VideoScreen(
         }
     }
     if (showSaveVideoSheet) {
-        SaveVideoSheet { shouldSave, description ->
-            if (shouldSave) {
-                onSaveVideo(description.orEmpty())
-                showSaveVideoSheet = false
-            } else {
-                onRedoVideo()
-                showSaveVideoSheet = false
-            }
-        }
+        SaveVideoSheet(
+            shouldSave = { shouldSave, description ->
+                if (shouldSave) {
+                    onSaveVideo(description.orEmpty())
+                    showSaveVideoSheet = false
+                } else {
+                    onRedoVideo()
+                    showSaveVideoSheet = false
+                }
+            },
+        )
     }
 }
