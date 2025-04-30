@@ -13,6 +13,7 @@ plugins {
     alias(libs.plugins.ktlint)
     alias(libs.plugins.junit5)
     alias(libs.plugins.paparazzi)
+    alias(libs.plugins.sqldelight)
 }
 
 val releaseSigningPropertiesFile = file("$rootDir/keyz/release/backbones.properties")
@@ -24,7 +25,7 @@ android {
 
     defaultConfig {
         applicationId = "com.gorczycait.backbones"
-        minSdk = 28
+        minSdk = 29
         targetSdk = 35
         compileSdk = 35
         versionCode = System.getenv("CI_PIPELINE_IID")?.toIntOrNull() ?: 1
@@ -128,6 +129,8 @@ dependencies {
     implementation(libs.accompanist.permissions)
     implementation(libs.accompanist.permissions)
 
+    implementation(libs.sqldelight.driver)
+
     detektPlugins(libs.detekt.rules)
     detekt(libs.detekt.cli)
 
@@ -179,4 +182,12 @@ fun DefaultConfig.loadManifestKeyFromLocalProperties(property: String) {
             ?.run { load(FileInputStream(this)) }
     }
     manifestPlaceholders[property] = localProperties.getProperty(property) ?: System.getenv(property)
+}
+
+sqldelight {
+    databases {
+        create("Database") {
+            packageName.set("com.gorczycait.backbones")
+        }
+    }
 }

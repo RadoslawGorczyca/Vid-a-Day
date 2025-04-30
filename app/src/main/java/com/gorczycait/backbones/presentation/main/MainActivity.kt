@@ -15,8 +15,6 @@ import com.ramcosta.composedestinations.generated.NavGraphs
 
 class MainActivity : ComponentActivity() {
 
-    // private val viewModel by viewModels<MainViewModel>()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen().setOnExitAnimation()
         super.onCreate(savedInstanceState)
